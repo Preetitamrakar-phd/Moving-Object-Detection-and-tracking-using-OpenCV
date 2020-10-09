@@ -1,0 +1,11 @@
+#Drawing Rectangle
+#cv2.rectangle(src,startpoint,endpoint,color,thickness)
+cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)
+
+#Putting Text in Image
+#cv2.putText(src,text,position,font,fontsize,color,thickness)
+cv2.putText(img,text,(10,20),cv2.FONT_HERSEY_SIMPLEX,0.5,(0,0,255),2)
+
+#FindContours
+#dst = cv2.findContours(srcImageCopy,contourRetrievalMode,contourApproximationMethod)
+cnts = cv2.findContours(threshImg.copy(),cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
